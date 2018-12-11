@@ -19,12 +19,12 @@
 # 二、测试样本的正确率测试
    
 ######运用测试集合求取相应的正确率进行调参，使用训练集样本
-'''
+
 	建立9*测试集数量的矩阵，行为九次svc的类别计数器
 	predict_lebal=np.zeros([num_test])
 	for i in range(9):
 		lebal=i+1
-'''
+
 ######对于第i类的样本标签one-hot化
 	y_train_hot=change(y_train,lebal,num_train)
 	y_test_hot=change(y_test,lebal,num_test)
