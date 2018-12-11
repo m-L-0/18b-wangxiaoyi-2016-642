@@ -31,15 +31,18 @@
 	y_test_hot=change(y_test,lebal,num_test)
 '''
 ######建立svc模型,并且对当前类别i进行模型学习
+	'''
 	svc=SVC(kernel='rbf',gamma=0.125,C=15)
 	svc.fit(x_train,y_train_hot)
 	predict=svc.predict(x_test)
 	get_acc(predict,y_test_hot,lebal)
 	get_predict(predict,predict_lebal,lebal)
+	'''
 ######输出最终的预测结果
+'''
 	print(predict_lebal[1:40:1])
 	print(get_acc(predict_lebal,y_test,10))
-
+'''
 
 ##### 程序运行结果
 	  第 1 类ova样本分类，准确率为： 0.9066410009624639 %
