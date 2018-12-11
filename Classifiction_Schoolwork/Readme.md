@@ -17,31 +17,35 @@
 
 
 # 二、测试样本的正确率测试
-#####运用测试集合求取相应的正确率进行调参，使用训练集样本
+###运用测试集合求取相应的正确率进行调参，使用训练集样本
 
-'''建立9*测试集数量的矩阵，行为九次svc的类别计数器
+```python
+#建立9*测试集数量的矩阵，行为九次svc的类别计数器
 predict_lebal=np.zeros([num_test])
 for i in range(9):
 	lebal=i+1
-'''
+```
 
-'''对于第i类的样本标签one-hot化
+```python
+#对于第i类的样本标签one-hot化
 y_train_hot=change(y_train,lebal,num_train)
 y_test_hot=change(y_test,lebal,num_test)
-'''
+```
 
-'''建立svc模型,并且对当前类别i进行模型学习
+```python
+#建立svc模型,并且对当前类别i进行模型学习
 svc=SVC(kernel='rbf',gamma=0.125,C=15)
 svc.fit(x_train,y_train_hot)
 predict=svc.predict(x_test)
 get_acc(predict,y_test_hot,lebal)
 get_predict(predict,predict_lebal,lebal)
-'''
+```
 
-'''输出最终的预测结果
+```python
+#输出最终的预测结果
 print(predict_lebal[1:40:1])
 print(get_acc(predict_lebal,y_test,10))
-'''
+```
 
 ##### 程序运行结果
 	  第 1 类ova样本分类，准确率为： 0.9066410009624639 %
