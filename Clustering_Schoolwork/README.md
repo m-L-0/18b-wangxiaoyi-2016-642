@@ -81,7 +81,9 @@ def run_mcl(matrix,e=2,r=2,min=0.01,max_turn=15):
     print('共经历 %d 轮迭代后获得收敛矩阵'%(x))
     return matrix
 ```
+#### 样本集图
 ![样本集图](result_image/mcl_schoolwork_1.png)
+#### 聚类结果图
 ![聚类结果集图](result_image/mcl_schoolwork_2.png)
 
 
