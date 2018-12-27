@@ -85,7 +85,6 @@ def get_clusters(matrix):
 
     return sorted(list(clusters))
 
-
 from sklearn.datasets import load_iris
 # 导入iris 数据集
 # 读取对应的特征集和标签数组
